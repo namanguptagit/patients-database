@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Patients Database</title>
+</head>
+<body>
+{{>navbar}}
+    <form name="contactForm" onsubmit="return validateForm()" action="/register" method="POST">
+        <h2>Application Form</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="row">
+            <label>Email Address<i>(optional)</i></label>
+            <input type="text" name="email">
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+        <div class="row">
+            <label>Age</label>
+            <input type="text" name="age" maxlength="3">
+        </div>
+        <div class="row">
+            <label>Symptoms<i>(optional)</i></label>
+            <input type="text" name="symptoms">
+        </div>
+        <div class="row">
+            <label>Medicine</label>
+            <input type="text" name="medicine">
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+
+    {{!-- <script src="/index.js"></script> --}}
+</body>
+</html>
